@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity
         }
         else
         {
+            progressDialog.setTitle("Loading...");
+            progressDialog.setMessage("Please Wait...");
+            progressDialog.show();
 
             checkUserexistence();
         }
@@ -103,6 +106,9 @@ public class MainActivity extends AppCompatActivity
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(!dataSnapshot.hasChild(currentUserId)){
                     sendUsertoRegisterActivity();
+                }
+                else{
+                    progressDialog.dismiss();
                 }
             }
 
