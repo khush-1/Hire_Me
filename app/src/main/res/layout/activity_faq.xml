@@ -44,7 +44,8 @@
             android:layout_marginTop="28dp"
             android:layout_alignRight="@+id/btn1"
             android:padding="8dp"
-            android:text="Do Software Companies favour CS/IT over Core" />
+            android:text="Are mechanical, civil and other core streams eligible for
+software jobs?" />
 
         <ImageButton
             android:id="@+id/btn2"
@@ -66,7 +67,7 @@
             android:layout_alignRight="@+id/btn2"
             android:layout_marginTop="90dp"
             android:padding="8dp"
-            android:text="Is CPI really important?" />
+            android:text="Do internships matter in campus placements?" />
 
         <ImageButton
             android:id="@+id/btn3"
@@ -87,7 +88,8 @@
             android:layout_marginTop="170dp"
             android:padding="8dp"
             android:layout_alignRight="@+id/btn3"
-            android:text="How to prepare for interview?" />
+            android:text="Do students with paid internships get higher offers in
+placements?" />
 
         <ImageButton
             android:id="@+id/btn4"
@@ -108,7 +110,8 @@
             android:layout_marginEnd="12dp"
             android:padding="8dp"
             android:layout_alignRight="@+id/btn4"
-            android:text="How many rounds of interview are there?" />
+            android:text="How can I start the preparation, in my 3rd year of
+engineering?" />
 
         <TextView
             android:id="@+id/Answer"
