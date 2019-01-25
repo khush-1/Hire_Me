@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.Ques) {
-            startActivity(new Intent(MainActivity.this,Questions.class));
+            startActivity(new Intent(MainActivity.this,QuesAns.class));
 
         }
 
