@@ -32,7 +32,7 @@
             android:layout_height="48dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="13dp"
             android:src="@drawable/ic_add" />
 
         <TextView
@@ -41,6 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="28dp"
+            android:layout_alignRight="@+id/btn1"
             android:padding="8dp"
             android:text="Are mechanical, civil and other core streams eligible for
 software jobs?" />
@@ -49,9 +51,9 @@ software jobs?" />
             android:id="@+id/btn2"
             android:layout_width="50dp"
             android:layout_height="48dp"
+            android:layout_below="@+id/btn1"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_below="@+id/btn1"
             android:layout_marginTop="85dp"
             android:padding="8dp"
             android:src="@drawable/ic_add" />
@@ -61,7 +63,9 @@ software jobs?" />
             android:layout_width="307dp"
             android:layout_height="38dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/btn2"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/btn2"
+            android:layout_marginTop="90dp"
             android:padding="8dp"
             android:text="Do internships matter in campus placements?" />
 
@@ -69,19 +73,21 @@ software jobs?" />
             android:id="@+id/btn3"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn2"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="157dp"
+            android:layout_marginTop="163dp"
             android:padding="8dp"
             android:src="@drawable/ic_add" />
 
         <TextView
             android:id="@+id/que3"
             android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/btn3"
+            android:layout_height="26dp"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="170dp"
             android:padding="8dp"
+            android:layout_alignRight="@+id/btn3"
             android:text="Do students with paid internships get higher offers in
 placements?" />
 
@@ -89,9 +95,9 @@ placements?" />
             android:id="@+id/btn4"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="215dp"
+            android:layout_below="@+id/btn3"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-70dp"
             android:padding="8dp"
             android:src="@drawable/ic_add" />
 
@@ -99,22 +105,25 @@ placements?" />
             android:id="@+id/que4"
             android:layout_width="302dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginBottom="206dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
             android:padding="8dp"
+            android:layout_alignRight="@+id/btn4"
             android:text="How can I start the preparation, in my 3rd year of
 engineering?" />
 
         <TextView
             android:id="@+id/Answer"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="71dp"
+            android:layout_marginBottom="173dp"
+            android:text="Answer"
             android:padding="8dp"
-            android:text="Answer" />
+            android:layout_below="@+id/btn4"
+            />
 
 
     </RelativeLayout>
