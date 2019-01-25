@@ -1,5 +1,7 @@
 package com.example.lenovo.hire_me;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,13 +15,34 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    FirebaseAuth mAuth;
+    FirebaseUser currentUser;
+    DatabaseReference firebaseDatabase;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mAuth=FirebaseAuth.getInstance();
+        currentUser=mAuth.getCurrentUser();
+        if(currentUser==null){
+            sendUserToLoginActivity();
+        }
+        else
+        {
+            checkUserexistence();
+        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,6 +63,38 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void checkUserexistence() {
+        final String currentUserId=currentUser.getUid();
+
+        firebaseDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
+        firebaseDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.hasChild(currentUserId)){
+                    sendUsertoRegisterActivity();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
+    private void sendUsertoRegisterActivity() {
+        Intent intent=new Intent(MainActivity.this,Registration.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void sendUserToLoginActivity() {
+        Intent intent=new Intent(MainActivity.this,Login.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -77,25 +132,37 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.Dashboard) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.Home) {
+            drawer.closeDrawer(GravityCompat.START);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.companies) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.apply) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.Comment) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.logout) {
+            progressDialog.setTitle("Logout");
+            progressDialog.setMessage("please wait while logging you out");
+            progressDialog.show();
+            mAuth.signOut();
+            finish();
+            Intent i=new Intent(MainActivity.this,Login.class);
+            startActivity(i);
+
+        }
+        else if (id == R.id.stats) {
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 }
