@@ -7,14 +7,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string-array name="branch">
-        <item >Computer Science</item>
-        <item >Electronics And Communication</item>
-        <item >Information Technology</item>
-        <item >Electrical</item>
-        <item >Chemical</item>
-        <item >Civil</item>
-        <item >Mechanical</item>
-        <item >BioTechnology</item>
+        <item>Computer Science</item>
+        <item>Electronics And Communication</item>
+        <item>Information Technology</item>
+        <item>Electrical</item>
+        <item>Chemical</item>
+        <item>Civil</item>
+        <item>Mechanical</item>
+        <item>BioTechnology</item>
 
     </string-array>
 </resources>
