@@ -50,6 +50,9 @@
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/regbtn"
+        android:layout_marginBottom="159dp"
         android:text="Forgot Password?" />
 
 </RelativeLayout>

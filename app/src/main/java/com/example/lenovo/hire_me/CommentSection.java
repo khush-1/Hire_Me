@@ -35,8 +35,8 @@ public class CommentSection extends AppCompatActivity {
         comment=(EditText)findViewById(R.id.commentbox);
         database=FirebaseDatabase.getInstance();
         postRef=database.getReference().child("Posts");
-        mAuth=FirebaseAuth.getInstance();
-        postList=(RecyclerView)findViewById(R.id.slide);
+        mAuth = FirebaseAuth.getInstance();
+        postList=(RecyclerView)findViewById(R.id.recyclerview);
         postList.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         linearLayoutManager.setReverseLayout(true);
