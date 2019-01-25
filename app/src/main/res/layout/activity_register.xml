@@ -16,36 +16,28 @@
         android:src="@drawable/index" />
 
     <EditText
-        android:id="@+id/regemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Email..."
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        />
 
     <EditText
-        android:id="@+id/regpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Password.."
-        android:inputType="textPassword" />
+        android:inputType="textPassword"/>
 
     <EditText
-        android:id="@+id/regpassword2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Confirm Password.."
-        android:inputType="textPassword" />
+        android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/regbtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register" />
+        android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/TextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AlreadyRegistered??SignUp Here" />
+        android:text="TextView"/>
 
 </LinearLayout>
