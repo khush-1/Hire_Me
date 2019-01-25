@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
     TextView t1;
     FirebaseAuth mAuth;
     ProgressDialog progressDialog;
-    private TextView forgotPassword;
+    TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,9 @@ public class Login extends AppCompatActivity {
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this,PasswordActivity.class));
+                Intent i=new Intent(Login.this,PasswordActivity.class);
+                startActivity(i);
+
             }
         });
 
