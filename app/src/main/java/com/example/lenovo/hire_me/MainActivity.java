@@ -158,22 +158,20 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.apply) {
 
         } else if (id == R.id.Comment) {
+           sendUserToCommentActivity();
+
 
         } else if (id == R.id.logout) {
 
             progressDialog.setMessage("please wait while logging you out");
             progressDialog.show();
             mAuth.signOut();
-
-            Intent i=new Intent(MainActivity.this,Login.class);
-            startActivity(i);
+            sendUserToLoginActivity();
             finish();
 
         }
         else if (id == R.id.faq) {
-            Intent i=new Intent(MainActivity.this,Faq.class);
-            startActivity(i);
-
+           sendUserToFaqActivity();
 
         }
 
@@ -184,4 +182,18 @@ public class MainActivity extends AppCompatActivity
 
         return true;
     }
+
+    private void sendUserToFaqActivity() {
+        Intent i=new Intent(MainActivity.this,Faq.class);
+        startActivity(i);
+        finish();
+
+    }
+
+    private void sendUserToCommentActivity() {
+        Intent i=new Intent(MainActivity.this,CommentSection.class);
+        startActivity(i);
+        finish();
+    }
+
 }

@@ -36,6 +36,10 @@
         <activity android:name=".Login" />
         <activity android:name=".Register" />
         <activity android:name=".Registration" />
+        <activity android:name=".CommentSection"/>
+        <activity android:name=".Faq"/>
+        <activity android:name=".PasswordActivity"/>
+
 
     </application>
 
