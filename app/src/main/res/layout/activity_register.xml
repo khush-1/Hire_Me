@@ -14,15 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:src="@drawable/index" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/username_reg_id"
-        android:hint="username"
-        android:padding="10dp"
-        android:background="@drawable/edittext_background"
-        android:layout_marginTop="15dp"
-        />
 
     <EditText
         android:layout_width="match_parent"
@@ -36,6 +27,15 @@
         />
 
     <EditText
+        android:id="@+id/username_reg_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_background"
+        android:hint="username"
+        android:padding="10dp" />
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/password_reg_id"
@@ -47,21 +47,19 @@
         />
 
     <Button
+        android:id="@+id/register_btn_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/register_btn_id"
-        android:text="REGISTER"
-        android:background="@drawable/button_background"
         android:layout_marginTop="15dp"
-        android:textColor="@color/colorPrimary"
-        />
+        android:background="@drawable/button_background"
+        android:text="REGISTER"
+        android:textColor="@color/colorPrimary" />
 
     <TextView
+        android:id="@+id/login_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:id="@+id/login_txt"
-        android:text="Already have an Account"
-        />
+        android:text="Already have an Account" />
 
 </LinearLayout>
