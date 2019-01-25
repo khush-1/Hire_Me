@@ -8,65 +8,39 @@
     android:padding="8dp"
     tools:context=".CommentSection">
 
-    <android.support.v7.widget.Toolbar
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:background="?android:attr/windowBackground"
-        ></android.support.v7.widget.Toolbar>
-
-    <view
+        android:padding="8dp"
         android:id="@+id/recyclerview"
-        class="android.support.v7.app.AlertController$RecycleListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        >
-    </view>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom"
-        android:background="#fff"
-        android:padding="4dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toolbar"
         >
 
-        <android.support.v4.widget.CircleImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_comment"
-            android:id="@+id/image_profile"
-            />
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:padding="4dp">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/commentbox"
-            android:hint="Add a Comment....."
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:layout_toRightOf="@+id/image_profile"
-            android:layout_marginStart="10dp"
-            android:background="@android:color/transparent"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/edittext_background"
+            android:hint="Write Your Comment Here" />
 
         <Button
             android:id="@+id/addcommentbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:text="POST"
-            android:textColor="@color/colorPrimary"
-
-
-            />
-
-    </RelativeLayout>
+            android:layout_width="73dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/commentox"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background"
+            android:text="POST" />
+    </LinearLayout>
 </RelativeLayout>
