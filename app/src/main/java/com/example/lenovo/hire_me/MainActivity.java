@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,21 +32,27 @@ public class MainActivity extends AppCompatActivity
     DatabaseReference firebaseDatabase;
     ProgressDialog progressDialog;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth=FirebaseAuth.getInstance();
+
+
         currentUser=mAuth.getCurrentUser();
         if(currentUser==null){
             Toast.makeText(this, "error1", Toast.LENGTH_SHORT).show();
             sendUserToLoginActivity();
+
         }
         else
         {
             Toast.makeText(this, "error2", Toast.LENGTH_SHORT).show();
             checkUserexistence();
         }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -66,6 +73,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     private void checkUserexistence() {
