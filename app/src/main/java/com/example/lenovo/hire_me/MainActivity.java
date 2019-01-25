@@ -164,9 +164,10 @@ public class MainActivity extends AppCompatActivity
             progressDialog.setMessage("please wait while logging you out");
             progressDialog.show();
             mAuth.signOut();
-            finish();
+
             Intent i=new Intent(MainActivity.this,Login.class);
             startActivity(i);
+            finish();
 
         }
         else if (id == R.id.faq) {
