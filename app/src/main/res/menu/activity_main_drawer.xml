@@ -25,6 +25,10 @@
             android:id="@+id/Comment"
             android:icon="@drawable/ic_menu_manage"
             android:title="Comment Section" />
+        <item
+            android:id="@+id/faq"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="FAQ's" />
 
         <item
             android:id="@+id/stats"

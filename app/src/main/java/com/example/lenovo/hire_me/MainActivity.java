@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.Comment) {
 
         } else if (id == R.id.logout) {
-            progressDialog.setTitle("Logout");
+           
             progressDialog.setMessage("please wait while logging you out");
             progressDialog.show();
             mAuth.signOut();
@@ -169,6 +169,13 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
 
         }
+        else if (id == R.id.faq) {
+            Intent i=new Intent(MainActivity.this,Faq.class);
+            startActivity(i);
+
+
+        }
+
         else if (id == R.id.stats) {
 
         }
