@@ -23,6 +23,7 @@ public class Login extends AppCompatActivity {
     TextView t1;
     FirebaseAuth mAuth;
     ProgressDialog progressDialog;
+    private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class Login extends AppCompatActivity {
         email=(EditText)findViewById(R.id.regemail) ;
         password=(EditText)findViewById(R.id.regpassword);
         mAuth=FirebaseAuth.getInstance();
+        forgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
+
 
         progressDialog=new ProgressDialog(this);
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +50,13 @@ public class Login extends AppCompatActivity {
                 Intent i=new Intent(Login.this,Register.class);
                 startActivity(i);
                 finish();
+            }
+        });
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this,PasswordActivity.class));
             }
         });
 
