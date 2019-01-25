@@ -22,7 +22,9 @@
         <activity android:name=".Login" />
         <activity android:name=".Register" />
         <activity android:name=".Registration" />
-        <activity android:name=".CommentSection"></activity>
+        <activity android:name=".CommentSection" />
+        <activity android:name=".post_layout" />
+        <activity android:name=".Faq"></activity>
     </application>
 
 </manifest>
