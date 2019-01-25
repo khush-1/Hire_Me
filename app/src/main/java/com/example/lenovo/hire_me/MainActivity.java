@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.Comment) {
 
         } else if (id == R.id.logout) {
-           
+
             progressDialog.setMessage("please wait while logging you out");
             progressDialog.show();
             mAuth.signOut();
