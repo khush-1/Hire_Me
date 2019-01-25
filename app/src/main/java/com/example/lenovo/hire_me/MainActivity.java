@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity
 
         currentUser=mAuth.getCurrentUser();
         if(currentUser==null){
-            Toast.makeText(this, "error1", Toast.LENGTH_SHORT).show();
+
             sendUserToLoginActivity();
 
         }
         else
         {
-            Toast.makeText(this, "error2", Toast.LENGTH_SHORT).show();
+
             checkUserexistence();
         }
 
