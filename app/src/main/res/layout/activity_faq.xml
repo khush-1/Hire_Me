@@ -1,9 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DCEDC8"
+
+    android:orientation="vertical"
+    android:padding="4dp"
     tools:context=".Faq">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/que1"
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="28dp"
+            android:text="Do Software Companies favour CS/IT over Core" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="85dp"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/que2"
+            android:layout_width="307dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="90dp"
+            android:text="Is CPI really important?" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="163dp"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/que3"
+            android:layout_width="310dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="170dp"
+            android:text="How to prepare for interview?" />
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-70dp"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/que4"
+            android:layout_width="302dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="How many rounds of interview are there?" />
+
+        <TextView
+            android:id="@+id/Answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="196dp"
+            android:text="Answer" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
