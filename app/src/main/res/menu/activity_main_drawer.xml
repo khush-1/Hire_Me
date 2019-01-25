@@ -26,6 +26,11 @@
             android:title="Archives" />
 
         <item
+            android:id="@+id/WISH"
+            android:icon="@drawable/ic_google"
+            android:title="WishList"/>
+
+        <item
             android:id="@+id/Ques"
             android:icon="@drawable/ic_menu_manage"
             android:title="Questions??" />
