@@ -212,6 +212,14 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this,QuesAns.class));
 
         }
+        else if (id == R.id.WISH) {
+            startActivity(new Intent(MainActivity.this,Wishlist.class));
+
+        }
+        else if (id == R.id.chatbox) {
+            startActivity(new Intent(MainActivity.this,ChatBox.class));
+
+        }
 
 
         return true;
