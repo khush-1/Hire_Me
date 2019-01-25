@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DCEDC8"
     tools:context=".CommentSection">
 
     <android.support.v7.widget.RecyclerView
@@ -25,6 +26,7 @@
 
             android:layout_alignParentTop="true"
             android:text="Comment Box"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
@@ -32,17 +34,18 @@
             android:id="@+id/commentbox"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-
+            android:background="@drawable/edittext_background"
             android:layout_alignParentTop="true"
 
             android:hint="Write Your Comment Here" />
 
         <Button
             android:id="@+id/addcommentbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/commentbox"
+            android:layout_width="73dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/commentox"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background"
             android:text="Add comment" />
     </LinearLayout>
 </RelativeLayout>
