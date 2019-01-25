@@ -4,40 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".Apply">
 
     <Button
         android:id="@+id/details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/about"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="139dp"
         android:text="Details" />
 
     <Button
         android:id="@+id/about"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/apply"
-        android:layout_marginTop="207dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
         android:text="ABOUT" />
 
     <Button
         android:id="@+id/apply"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="169dp"
-        android:layout_marginStart="117dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="162dp"
         android:text="APPLY NOW" />
 
     <Spinner
         android:id="@+id/companyId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="35dp" />

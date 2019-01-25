@@ -23,6 +23,7 @@
             android:layout_weight="1"
             android:src="@drawable/clglogo"
             android:visibility="visible" />
+
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
