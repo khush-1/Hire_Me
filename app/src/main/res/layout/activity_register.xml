@@ -11,44 +11,57 @@
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="50dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:src="@drawable/index" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_reg_id"
+        android:hint="username"
+        android:padding="10dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="15dp"
+        />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/email_reg_id"
+        android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="15dp"
-        android:hint="User Name"
-        android:background="@drawable/edittext_background"
         android:padding="10dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="15dp"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/password_reg_id"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/edittext_background"
+        android:layout_marginTop="15dp"
         />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/register_btn_id"
+        android:text="REGISTER"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimary"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/login_txt"
+        android:text="Already have an Account"
+        />
 
 </LinearLayout>
