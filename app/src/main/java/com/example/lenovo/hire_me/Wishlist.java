@@ -41,6 +41,7 @@ public class Wishlist extends AppCompatActivity {
                       Wishlist_Company Dcomp=new Wishlist_Company(comp);
                       database_wish.child(id).setValue(Dcomp);
                      Toast.makeText(Wishlist.this, "Company added to Wishlist", Toast.LENGTH_SHORT).show();
+                     dream_company.setText("");
                  }
             }
         });

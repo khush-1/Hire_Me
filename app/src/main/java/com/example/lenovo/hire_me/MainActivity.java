@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     DatabaseReference firebaseDatabase;
     ProgressDialog progressDialog;
 
+    TextView about;
 
 
     @Override
@@ -39,7 +40,24 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth=FirebaseAuth.getInstance();
+         about=findViewById(R.id.about);
 
+         about.setText("Motilal Nehru National Institute Of Technology, Allahabad was formerly Motilal\n" +
+                 "Nehru Regional Engineering College, Allahabad . It is an institute with total\n" +
+                 "commitment to quality and excellence in academic pursuits, is among one of the\n" +
+                 "leading institutes in INDIA and was established in year 1961 as a joint enterprise of\n" +
+                 "Govt. of India and Govt. of U.P. in accordance with the scheme of establishment of\n" +
+                 "REC. However with effect from June 26th of 2002 the college became deemed\n" +
+                 "university and is now known as Motilal Nehru National Institute of technology. The\n" +
+                 "foundation stone of the college was laid by the first Prime Minister of India, Pt.\n" +
+                 "Jawahar Lal Nehru on the 3rd of may, 1961 on a site spreading over 222 acres on\n" +
+                 "the banks of the river Ganga. The main building of college was inaugurated by\n" +
+                 "another illustrious son of India, Prime Minister Sri Lal Bahadur Shastri on 18th of\n" +
+                 "April, 1965. The students are extensively exposed to cross-cultural environment as\n" +
+                 "candidates from various other countries such as Sri Lanka, Nepal, Bangladesh,\n" +
+                 "Bhutan, Mauritius, Malaysia, Iran, Yemen, Iraq, Palestine and Thailand also join\n" +
+                 "MNNIT for various undergraduate and post-graduate programs. MNNIT is fully\n" +
+                 "residential institution with eight hostels for boys and two for girls.");
 
         currentUser=mAuth.getCurrentUser();
         if(currentUser==null){
