@@ -175,6 +175,7 @@ public class MainActivity extends AppCompatActivity
             progressDialog.setMessage("please wait while logging you out");
             progressDialog.show();
             mAuth.signOut();
+            finish();
             sendUserToLoginActivity();
 
 
