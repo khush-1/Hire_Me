@@ -28,6 +28,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -335,6 +336,7 @@ public class AdminLogin extends AppCompatActivity implements LoaderCallbacks<Cur
             showProgress(false);
 
             if (success) {
+                Toast.makeText(AdminLogin.this, "Successfully logged in as admin!!", Toast.LENGTH_SHORT).show();
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

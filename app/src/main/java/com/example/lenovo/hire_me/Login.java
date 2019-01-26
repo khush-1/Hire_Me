@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
         password=(EditText)findViewById(R.id.regpassword);
         mAuth=FirebaseAuth.getInstance();
         forgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
-        admin_login=findViewById(R.id.admin_login_id);
+        admin_login=(TextView)findViewById(R.id.admin_login_id);
 
 
 
@@ -52,6 +52,14 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(Login.this,Register.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        admin_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Login.this, AdminLogin.class);
                 startActivity(i);
                 finish();
             }
@@ -105,14 +113,7 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
-        admin_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Login.this, AdminLogin.class);
-                startActivity(i);
-                finish();
-            }
-        });
+
 
     }
 
