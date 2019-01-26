@@ -77,8 +77,8 @@ public class Registration extends AppCompatActivity {
         String phone=regPhone.getText().toString().trim();
         String dob=regDob.getText().toString().trim();
 
-        User user=new User(name,
-                dob,email,phone,branch);
+        UserProfile user=new UserProfile(name,
+                email,branch,dob,phone);
         FirebaseDatabase.getInstance().getReference("Users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {

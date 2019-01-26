@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.Dashboard) {
-            // Handle the camera action
+            startActivity(new Intent(MainActivity.this,Dashboard.class));
         } else if (id == R.id.Home) {
             drawer.closeDrawer(GravityCompat.START);
 
