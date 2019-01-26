@@ -51,7 +51,7 @@ public class Statistics extends AppCompatActivity {
                     stats.add(userDetails.getValue().toString());
                 }
                 setuppiechart();
-                setupbarchart();
+                solve();
 
                 //databaseReference.removeEventListener();
             }
@@ -86,31 +86,29 @@ public class Statistics extends AppCompatActivity {
 
 
     }
+   private void solve() {
+        BarChart lineChart = (BarChart) findViewById(R.id.chart2);
+        lineChart.setDrawBarShadow(false);
+      lineChart.setDrawValueAboveBar(true);
+        List<BarEntry> barEntries = new ArrayList<>();
+        for(int i = 0; i< stats.size();i++) {
+            Float f1 = Float.parseFloat(stats.get(i));
 
-//    private void solve() {
-//        BarChart lineChart = (BarChart) findViewById(R.id.chart);
-//        lineChart.setDrawBarShadow(false);
-//        lineChart.setDrawValueAboveBar(true);
-//        ArrayList<BarEntry> entries = new ArrayList<>();
-//        for(int i = 0; i< stats.size();i++) {
-//            String valspi = stats.get(i);
-//            if (valspi.equals("n/a"))
-//                valspi = "0";
-//            entries.add(new BarEntry(Float.parseFloat(valspi), i));
-//        }
-//
-//        BarDataSet dataset = new BarDataSet(entries, "Year");
-//
-//        ArrayList<String> labels = new ArrayList<String>();
-//        for(int i = 0;i < stats.size();i++) {
-//            String tmp = Integer.toString(i+1);
-//            labels.add(tmp);
-//        }
-//        BarData data = new BarData(dataset);
-//        dataset.setColors(ColorTemplate.COLORFUL_COLORS); //
-//        dataset.setHighlightEnabled(true);
-//        lineChart.setData(data);
-//    }
+            barEntries.add(new BarEntry(i+1,f1));
+        }
+
+        BarDataSet dataset = new BarDataSet(barEntries, "Year");
+
+        ArrayList<String> labels = new ArrayList<String>();
+        for(int i = 0;i < stats.size();i++) {
+            String tmp=branch.get(i);
+            labels.add(tmp);
+        }
+        BarData data = new BarData(dataset);
+        dataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        dataset.setHighlightEnabled(true);
+        lineChart.setData(data);
+   }
 //    public void solve2()
 //    {
 //        LineChart lineChart = (LineChart) findViewById(R.id.chart2);
