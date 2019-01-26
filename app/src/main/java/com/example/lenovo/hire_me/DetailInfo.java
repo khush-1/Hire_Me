@@ -67,6 +67,11 @@ public class DetailInfo extends AppCompatActivity {
         });
 
 
-
+         tvposition.setText("");
+        tvcpi.setText("");
+        tvctc.setText("");
+        tvallowed.setText("");
+        tvpreference.setText("");
+        tvdeadline.setText("");
     }
 }
