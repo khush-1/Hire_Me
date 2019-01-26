@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.stats) {
+            startActivity(new Intent(MainActivity.this,Statistics.class));
 
         }
 

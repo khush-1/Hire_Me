@@ -43,6 +43,7 @@
         <activity android:name=".Dashboard" />
         <activity android:name=".Visiting_Companies" />
         <activity android:name=".Comany" />
+        <activity android:name=".Statistics"/>
         <activity android:name=".WebViewActivity" />
         <activity android:name=".Apply"></activity>
     </application>

@@ -51,6 +51,7 @@ public class Statistics extends AppCompatActivity {
                     stats.add(userDetails.getValue().toString());
                 }
                 setuppiechart();
+                setupbarchart();
 
                 //databaseReference.removeEventListener();
             }
@@ -60,6 +61,11 @@ public class Statistics extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void setupbarchart() {
+
 
     }
 
