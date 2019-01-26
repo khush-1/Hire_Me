@@ -70,7 +70,7 @@ public class Apply extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Apply.this,DetailInfo.class);
-                intent.putExtra("positionsOfCompany",databaseReference);
+              //  intent.putExtra("positionsOfCompany",databaseReference);
                 startActivity(intent);
             }
         });
