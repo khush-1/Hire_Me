@@ -61,6 +61,14 @@ public class Apply extends AppCompatActivity {
             }
         });
 
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Apply.this,CompanyDetails.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
