@@ -174,9 +174,15 @@ public class Registration extends AppCompatActivity {
                     email,phone,branch,r,t);
             FirebaseDatabase.getInstance().getReference("Users")
                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    .setValue(user).addOnFailureListener(new OnFailureListener() {
                 @Override
-                public void onComplete(@NonNull Task<Void> task) {
+                public void onFailure(@NonNull Exception e) {
+                    progressDialog.dismiss();
+                    Toast.makeText(Registration.this, "sorry", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
                     Intent i=new Intent(Registration.this,MainActivity.class);
 
                     startActivity(i);
@@ -184,12 +190,6 @@ public class Registration extends AppCompatActivity {
 
                     progressDialog.dismiss();
                     Toast.makeText(Registration.this, "done", Toast.LENGTH_SHORT).show();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    progressDialog.dismiss();
-                    Toast.makeText(Registration.this, "sorry", Toast.LENGTH_SHORT).show();
                 }
             });
         }
