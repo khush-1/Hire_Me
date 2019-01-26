@@ -167,9 +167,9 @@ public class Registration extends AppCompatActivity {
         }
 
         else{
-            progressDialog.setTitle("registering..");
+            /*progressDialog.setTitle("registering..");
             progressDialog.show();
-
+*/
             User user=new User(name,dob,
                     email,phone,branch,r,t);
             FirebaseDatabase.getInstance().getReference("Users")
