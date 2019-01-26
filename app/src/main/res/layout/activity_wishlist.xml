@@ -10,24 +10,4 @@
     android:layout_marginTop="10dp"
     >
 
-    <EditText
-        android:id="@+id/wish"
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="14dp"
-        android:layout_marginTop="86dp"
-        android:layout_alignRight="@+id/imgwish"
-        android:background="@drawable/edittext_background"
-        android:hint="Share name of your dream Company" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imgwish"
-        android:layout_alignLeft="@+id/wish"
-        android:src="@drawable/ic_wishlist" />
-
 </RelativeLayout>

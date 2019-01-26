@@ -50,7 +50,10 @@
               android:layout_marginRight="-310dp"
               android:layout_marginTop="20dp"
               android:textSize="20dp"
-              android:textStyle="bold"></TextView>
+              android:textStyle="bold"
+              android:textColor="@color/black"
+              ></TextView>
+
 
       </LinearLayout>
 
@@ -80,7 +83,8 @@
                 android:layout_height="match_parent"
                 android:layout_alignRight="@+id/contact"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
       <LinearLayout
@@ -110,7 +114,8 @@
               android:layout_height="match_parent"
               android:layout_alignRight="@+id/dob"
               android:textSize="20dp"
-              android:textStyle="bold" />
+              android:textStyle="bold"
+              android:textColor="@color/black"/>
 
 
       </LinearLayout>
@@ -145,7 +150,8 @@
                 android:layout_alignRight="@+id/email"
                 android:layout_below="@+id/tvDOB"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
@@ -178,7 +184,8 @@
                 android:layout_alignRight="@+id/branch"
                 android:layout_below="@+id/tvEmail"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
 
         </LinearLayout>
@@ -211,6 +218,7 @@
                 android:layout_below="@+id/branch"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 />
 
         </LinearLayout>
@@ -240,7 +248,8 @@
                 android:layout_width="289dp"
                 android:layout_height="match_parent"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
 
         </LinearLayout>
