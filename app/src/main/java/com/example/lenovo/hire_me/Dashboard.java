@@ -40,20 +40,31 @@ public class Dashboard extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference().child(firebaseAuth.getCurrentUser().getUid());
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Users");
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    String fullName=dataSnapshot.child("name").getValue().toString();
+                    String DOb=dataSnapshot.child("dob").getValue().toString();
+                    String Branch=dataSnapshot.child("branch").getValue().toString();
+                    String eMail=dataSnapshot.child("email").getValue().toString();
 
-                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                profileName.setText(userProfile.getName());
-                profileEmail.setText(userProfile.getEmail());
-                profileBranch.setText(userProfile.getBranch());
-                profileDob.setText(userProfile.getDob());
-                profileContact.setText(userProfile.getPhone());
-                profileResume.setText(userProfile.getR());
-                profileTranscript.setText(userProfile.getT());
+                    String Phone=dataSnapshot.child("phone").getValue().toString();
+                    String res=dataSnapshot.child("r").getValue().toString();
+                    String trans=dataSnapshot.child("t").getValue().toString();
+                    profileName.setText(fullName);
+                    profileTranscript.setText(trans);
+                    profileResume.setText(res);
+                    profileBranch.setText(Branch);
+                    profileDob.setText(DOb);
+                    profileContact.setText(Phone);
+                    profileEmail.setText(eMail);
+
+
+                }
+
 
 
             }
