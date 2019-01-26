@@ -20,39 +20,39 @@ public class UserProfile {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
 
     public String getUsercontact() {
         return usercontact;
     }
 
-    public void setUsercontact(String usercontact) {
-        this.usercontact = usercontact;
-    }
+//    public void setUsercontact(String usercontact) {
+//        this.usercontact = usercontact;
+//    }
 
     public String getUseremail() {
         return useremail;
     }
 
-    public void setUseremail(String useremail) {
-        this.useremail = useremail;
-    }
+//    public void setUseremail(String useremail) {
+//        this.useremail = useremail;
+//    }
 
     public String getUserdob() {
         return userdob;
     }
 
-    public void setUserdob(String userdob) {
-        this.userdob = userdob;
-    }
+//    public void setUserdob(String userdob) {
+//        this.userdob = userdob;
+//    }
 
     public String getUserbranch() {
         return userbranch;
     }
 
-    public void setUserbranch(String userbranch) {
-        this.userbranch = userbranch;
-    }
+//    public void setUserbranch(String userbranch) {
+//        this.userbranch = userbranch;
+//    }
 }
