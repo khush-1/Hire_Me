@@ -190,6 +190,11 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+        else if (id == R.id.Ques) {
+            startActivity(new Intent(MainActivity.this,Questions.class));
+
+        }
+
 
         return true;
     }
