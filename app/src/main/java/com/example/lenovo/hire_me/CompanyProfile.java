@@ -2,19 +2,21 @@ package com.example.lenovo.hire_me;
 
 public class CompanyProfile {
 
-    public String position,cpi,ctc,deadline,preference;
+    public String position,cpi,ctc,deadline,preference,branchesallowed;
 
     public CompanyProfile()
     {
 
     }
-    public CompanyProfile(String postion1,String cpi1,String ctc1,String deadline1,String preference1)
+    public CompanyProfile(String postion1,String cpi1,String ctc1,String deadline1,String preference1,String branchesallowed1)
     {
         this.position = postion1;
         this.cpi = cpi1;
         this.ctc = ctc1;
         this.deadline = deadline1;
         this.preference = preference1;
+        this.branchesallowed = branchesallowed1;
+
     }
 
     public String getPosition() {
@@ -55,6 +57,14 @@ public class CompanyProfile {
 
     public void setPreference(String preference) {
         this.preference = preference;
+    }
+
+    public String getBranchesallowed() {
+        return branchesallowed;
+    }
+
+    public void setBranchesallowed(String branchesallowed) {
+        this.branchesallowed = branchesallowed;
     }
 }
 
