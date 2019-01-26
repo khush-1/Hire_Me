@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,6 +49,7 @@ public class Apply extends AppCompatActivity {
 
             @Override
             public void onNothingSelected (AdapterView < ? > parent){
+                Toast.makeText(Apply.this, "Select the company name", Toast.LENGTH_SHORT).show();
 
             }
         });
