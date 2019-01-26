@@ -7,7 +7,7 @@ public class User {
 
     }
 
-    public User(String branch, String dob, String email, String name, String phone,String r,String t) {
+    public User(String name, String dob, String email, String phone, String branch,String r,String t) {
         this.name = name;
         this.dob = dob;
         this.email = email;
