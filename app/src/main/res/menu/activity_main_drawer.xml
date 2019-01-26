@@ -20,6 +20,11 @@
             android:id="@+id/apply"
             android:icon="@drawable/ic_menu_manage"
             android:title="Apply Now" />
+        <item
+            android:id="@+id/archives"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Archives" />
+
 
         <item
             android:id="@+id/Comment"
@@ -34,10 +39,12 @@
             android:id="@+id/stats"
             android:icon="@drawable/ic_menu_manage"
             android:title="Statistic" />
+
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_menu_manage"
             android:title="Logout" />
+
 
     </group>
 

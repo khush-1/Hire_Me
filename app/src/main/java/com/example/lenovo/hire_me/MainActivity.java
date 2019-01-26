@@ -162,7 +162,13 @@ public class MainActivity extends AppCompatActivity
            sendUserToCommentActivity();
 
 
-        } else if (id == R.id.logout) {
+        }
+        else if(id == R.id.archives)
+        {
+            startActivity(new Intent(MainActivity.this,WebViewActivity.class));
+        }
+        else if (id == R.id.logout) {
+
 
             progressDialog.setMessage("please wait while logging you out");
             progressDialog.show();
