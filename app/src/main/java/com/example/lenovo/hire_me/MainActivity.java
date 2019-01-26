@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.companies) {
 
+
         } else if (id == R.id.apply) {
 
         } else if (id == R.id.Comment) {
