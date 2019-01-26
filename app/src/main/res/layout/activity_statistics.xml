@@ -13,11 +13,15 @@
         android:id="@+id/first">
 
 
-        <com.github.mikephil.charting.charts.PieChart
+        <com.github.mikephil.charting.charts.BarChart
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/Chart"></com.github.mikephil.charting.charts.PieChart>
+            android:id="@+id/chart"></com.github.mikephil.charting.charts.BarChart>
 
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/chart2"></com.github.mikephil.charting.charts.LineChart>
     </LinearLayout>
 
 </ScrollView>

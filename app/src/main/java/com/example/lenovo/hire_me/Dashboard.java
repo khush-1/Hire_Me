@@ -50,6 +50,8 @@ public class Dashboard extends AppCompatActivity {
                 profileBranch.setText(userProfile.getBranch());
                 profileDob.setText(userProfile.getDob());
                 profileContact.setText(userProfile.getPhone());
+                profileResume.setText(userProfile.getR());
+                profileTranscript.setText(userProfile.getT());
 
             }
 

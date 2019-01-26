@@ -11,18 +11,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/tvName"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="81dp"
         android:text="Name"
         tools:layout_editor_absoluteX="66dp"
         tools:layout_editor_absoluteY="208dp" />
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="105dp"
+        android:layout_width="77dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignStart="@+id/tvDOB"
         tools:layout_editor_absoluteX="111dp"
         tools:layout_editor_absoluteY="112dp" />
 
@@ -59,9 +60,9 @@
         android:id="@+id/tvDOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="214dp"
-        android:layout_toEndOf="@+id/email"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/dob"
+        android:layout_marginEnd="115dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="546dp" />
@@ -71,9 +72,9 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvContact"
-        android:layout_marginTop="-94dp"
-        android:layout_toEndOf="@+id/tvEmail"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginTop="140dp"
         android:text="Email "
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="162dp" />
@@ -83,17 +84,17 @@
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="153dp"
+        android:layout_alignEnd="@+id/tvName"
+        android:layout_alignTop="@+id/email"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/branch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tvContact"
-        android:layout_alignTop="@+id/tvBranch"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginBottom="212dp"
         android:text="Branch"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="360dp" />
@@ -105,18 +106,36 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="222dp"
-        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="204dp"
+        android:layout_marginEnd="137dp"
         android:text="TextView" />
 
     <Button
         android:id="@+id/btnupdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/email"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="45dp"
+        android:layout_below="@+id/dob"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-122dp"
         android:text="UPDATE PROFILE" />
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btnupdate"
+        android:layout_marginTop="23dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:layout_toStartOf="@+id/tvBranch"
+        android:text="TextView" />
 
 
 </RelativeLayout>
