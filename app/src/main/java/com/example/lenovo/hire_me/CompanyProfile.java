@@ -8,9 +8,9 @@ public class CompanyProfile {
     {
 
     }
-    public CompanyProfile(String postion1,String cpi1,String ctc1,String deadline1,String preference1,String branchesallowed1)
+    public CompanyProfile(String position1,String cpi1,String ctc1,String deadline1,String preference1,String branchesallowed1)
     {
-        this.position = postion1;
+        this.position = position1;
         this.cpi = cpi1;
         this.ctc = ctc1;
         this.deadline = deadline1;
