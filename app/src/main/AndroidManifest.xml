@@ -58,7 +58,9 @@
             android:label="@string/title_activity_admin_login" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".QuesAns" />
-        <activity android:name=".ChatBox"></activity>
+        <activity android:name=".ChatBox" />
+        <activity android:name=".CompanyDetails" />
+        <activity android:name=".ApplyNow"></activity>
     </application>
 
 </manifest>
