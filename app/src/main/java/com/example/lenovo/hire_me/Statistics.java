@@ -5,12 +5,16 @@ import android.os.Bundle;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Statistics extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -45,8 +50,8 @@ public class Statistics extends AppCompatActivity {
                     branch.add(userDetails.getKey().toString());
                     stats.add(userDetails.getValue().toString());
                 }
-                solve2();
-                solve();
+                setuppiechart();
+
                 //databaseReference.removeEventListener();
             }
 
@@ -58,63 +63,81 @@ public class Statistics extends AppCompatActivity {
 
     }
 
-    private void solve() {
-        BarChart lineChart = (BarChart) findViewById(R.id.chart);
-        lineChart.setDrawBarShadow(false);
-        lineChart.setDrawValueAboveBar(true);
-        ArrayList<BarEntry> entries = new ArrayList<>();
+    private void setuppiechart() {
+        List<PieEntry> pieEntries = new ArrayList<>();
         for(int i = 0; i< stats.size();i++) {
-            String valspi = stats.get(i);
-            if (valspi.equals("n/a"))
-                valspi = "0";
-            entries.add(new BarEntry(Float.parseFloat(valspi), i));
-        }
+            Float f1 = Float.parseFloat(stats.get(i));
 
-        BarDataSet dataset = new BarDataSet(entries, "Year");
-
-        ArrayList<String> labels = new ArrayList<String>();
-        for(int i = 0;i < stats.size();i++) {
-            String tmp = Integer.toString(i+1);
-            labels.add(tmp);
+            pieEntries.add(new PieEntry(f1,branch.get(i)));
         }
-        BarData data = new BarData(dataset);
-        dataset.setColors(ColorTemplate.COLORFUL_COLORS); //
-        dataset.setHighlightEnabled(true);
-        lineChart.setData(data);
+        PieDataSet dataSet=new PieDataSet(pieEntries,"Year");
+        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        PieData data=new PieData(dataSet);
+        PieChart chart=(PieChart)findViewById(R.id.chart);
+        chart.setData(data);
+        chart.animateX(1000);
+        chart.invalidate();
+
+
     }
-    public void solve2()
-    {
-        LineChart lineChart = (LineChart) findViewById(R.id.chart2);
-        ArrayList<Entry> entries = new ArrayList<Entry>();
-        for(int i = 0; i< stats.size();i++) {
-            String valspi = stats.get(i);
-            if (valspi.equals("n/a"))
-                valspi = "0";
-            else if(valspi.equals(""))
-                valspi = "0";
-            else
-                entries.add(new Entry(Float.parseFloat(valspi), i));
-        }
 
-        LineDataSet dataset = new LineDataSet(entries, "Year");
-
-        ArrayList<String> labels = new ArrayList<String>();
-        for(int i = 0;i < stats.size();i++)
-        {
-            labels.add(branch.get(i));
-        }
-
-        LineData data;
-        data = new LineData(dataset);
-        dataset.setColors(ColorTemplate.COLORFUL_COLORS); //
-        dataset.setHighlightEnabled(true);
-        //dataset.setDrawCubic(true);
-        dataset.setDrawCircles(true);
-        dataset.setDrawFilled(true);
-
-        lineChart.setData(data);
-        lineChart.animateY(2000);
-    }
+//    private void solve() {
+//        BarChart lineChart = (BarChart) findViewById(R.id.chart);
+//        lineChart.setDrawBarShadow(false);
+//        lineChart.setDrawValueAboveBar(true);
+//        ArrayList<BarEntry> entries = new ArrayList<>();
+//        for(int i = 0; i< stats.size();i++) {
+//            String valspi = stats.get(i);
+//            if (valspi.equals("n/a"))
+//                valspi = "0";
+//            entries.add(new BarEntry(Float.parseFloat(valspi), i));
+//        }
+//
+//        BarDataSet dataset = new BarDataSet(entries, "Year");
+//
+//        ArrayList<String> labels = new ArrayList<String>();
+//        for(int i = 0;i < stats.size();i++) {
+//            String tmp = Integer.toString(i+1);
+//            labels.add(tmp);
+//        }
+//        BarData data = new BarData(dataset);
+//        dataset.setColors(ColorTemplate.COLORFUL_COLORS); //
+//        dataset.setHighlightEnabled(true);
+//        lineChart.setData(data);
+//    }
+//    public void solve2()
+//    {
+//        LineChart lineChart = (LineChart) findViewById(R.id.chart2);
+//        ArrayList<Entry> entries = new ArrayList<Entry>();
+//        for(int i = 0; i< stats.size();i++) {
+//            String valspi = stats.get(i);
+//            if (valspi.equals("n/a"))
+//                valspi = "0";
+//            else if(valspi.equals(""))
+//                valspi = "0";
+//            else
+//                entries.add(new Entry(Float.parseFloat(valspi), i));
+//        }
+//
+//        LineDataSet dataset = new LineDataSet(entries, "Year");
+//
+//        ArrayList<String> labels = new ArrayList<String>();
+//        for(int i = 0;i < stats.size();i++)
+//        {
+//            labels.add(branch.get(i));
+//        }
+//
+//        LineData data;
+//        data = new LineData(dataset);
+//        dataset.setColors(ColorTemplate.COLORFUL_COLORS); //
+//        dataset.setHighlightEnabled(true);
+//        //dataset.setDrawCubic(true);
+//        dataset.setDrawCircles(true);
+//        dataset.setDrawFilled(true);
+//
+//        lineChart.setData(data);
+//        lineChart.animateY(2000);
+//    }
 
 }
 
