@@ -2,6 +2,12 @@
 <resources>
     <color name="colorPrimary">#32cd32</color>
     <color name="colorPrimaryDark">#228b22</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#D50000</color>
     <color name="black">#000000</color>
+    <color name="lightgray">#BDBDBD</color>
+    <color name="deeppurple">#651FFF</color>
+    <color name="pink">#EC407A</color>
+    <color name="yellow">#FDDF00</color>
+
+
 </resources>

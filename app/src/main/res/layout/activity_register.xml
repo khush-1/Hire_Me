@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/regemail"
         android:background="@drawable/edittext_background"
         android:hint="Password"
         android:inputType="textPassword"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="103dp"
+        android:layout_marginBottom="137dp"
         android:background="@drawable/button_background"
         android:text="REGISTER"
         android:textColor="@color/colorPrimary" />
@@ -64,13 +64,12 @@
     <EditText
         android:id="@+id/regpassword2"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="172dp"
-        android:hint="confirm password"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/regpassword"
         android:background="@drawable/edittext_background"
         android:ems="10"
+        android:hint="confirm password"
         android:inputType="textPassword" />
 
 </RelativeLayout>

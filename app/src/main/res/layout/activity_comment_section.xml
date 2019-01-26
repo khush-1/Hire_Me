@@ -31,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentTop="true"
+            android:inputType="text"
             android:background="@drawable/edittext_background"
             android:hint="Write Your Comment Here" />
 
@@ -42,5 +43,9 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
             android:text="POST" />
+
+
     </LinearLayout>
+
+
 </RelativeLayout>
