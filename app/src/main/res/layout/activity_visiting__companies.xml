@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,50 +8,161 @@
     android:padding="10dp"
     tools:context=".Visiting_Companies">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:padding="8dp"
-        >
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/out1"
             >
-            <LinearLayout
+
+            <TextView
+                android:id="@+id/statusgoogle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:id="@+id/layout1"
-                >
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textStyle="bold"
+                android:textSize="20dp"
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@color/pink"
-                    android:src="@drawable/ic_google"
-                    android:id="@+id/company1"
-                    android:padding="10dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Google"
-                    
-                    android:textStyle="bold"
+                />
 
-                    />
-            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_below="@+id/statusgoogle"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/newgoogle"
+                />
 
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/out2"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/out1"
+            >
+
+            <TextView
+                android:id="@+id/statusSamsung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textStyle="bold"
+                android:textSize="20dp"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_below="@+id/statusgoogle"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/samsung_logo"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/out3"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/out2"
+            >
+
+            <TextView
+                android:id="@+id/statusWipro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textStyle="bold"
+                android:textSize="20dp"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_below="@+id/statusgoogle"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/wipro"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/out4"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/out3"
+            >
+
+            <TextView
+                android:id="@+id/statusQualcom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textStyle="bold"
+                android:textSize="20dp"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_below="@+id/statusgoogle"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/Qualcom"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/out5"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/out4"
+            >
+
+            <TextView
+                android:id="@+id/statusReliance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:textStyle="bold"
+                android:textSize="20dp"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_below="@+id/statusgoogle"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/Qualcom"
+                />
+
+        </LinearLayout>
 
 
-    </LinearLayout>
 
 
-</RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
