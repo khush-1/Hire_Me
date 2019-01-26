@@ -25,6 +25,10 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Archives" />
 
+        <item
+            android:id="@+id/Ques"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Questions??" />
 
         <item
             android:id="@+id/Comment"

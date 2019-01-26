@@ -56,7 +56,8 @@
         <activity
             android:name=".Admin.AdminLogin"
             android:label="@string/title_activity_admin_login" />
-        <activity android:name=".UpdateActivity"></activity>
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".QuesAns"></activity>
     </application>
 
 </manifest>
