@@ -53,9 +53,9 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
 
-        regName = (EditText) findViewById(R.id.name);
+        regName = (EditText)findViewById(R.id.username);
         registerBtn = (Button) findViewById(R.id.register);
-        regEmail = (EditText) findViewById(R.id.email);
+        regEmail = (EditText) findViewById(R.id.regemail);
         regPhone = (EditText) findViewById(R.id.phone);
         regDob = (EditText) findViewById(R.id.dob);
         regBranch = (Spinner) findViewById(R.id.spinner);
@@ -153,40 +153,50 @@ public class Registration extends AppCompatActivity {
 
 
     private void RegisterUser() {
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("registering..");
-        progressDialog.show();
+
+       // final ProgressDialog progressDialog = new ProgressDialog(this);
+
         String name=regName.getText().toString().trim();
         final String email=regEmail.getText().toString().trim();
         String phone=regPhone.getText().toString().trim();
         String dob=regDob.getText().toString().trim();
         String r=resu.getText().toString().trim();
         String t=tra.getText().toString().trim();
+        if(name.equals("")||email.equals("")||phone.equals("")||dob.equals("")||r.equals("")||t.equals("")){
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+        }
 
-        User user=new User(name,dob,
-                email,phone,branch,r,t);
-        FirebaseDatabase.getInstance().getReference("Users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                Intent i=new Intent(Registration.this,MainActivity.class);
+        else{
+            progressDialog.setTitle("registering..");
+            progressDialog.show();
 
-                startActivity(i);
-                finish();
+            User user=new User(name,dob,
+                    email,phone,branch,r,t);
+            FirebaseDatabase.getInstance().getReference("Users")
+                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    Intent i=new Intent(Registration.this,MainActivity.class);
 
-                progressDialog.dismiss();
-                Toast.makeText(Registration.this, "done", Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                progressDialog.dismiss();
-                Toast.makeText(Registration.this, "sorry", Toast.LENGTH_SHORT).show();
-            }
-        });
+                    startActivity(i);
+                    finish();
+
+                    progressDialog.dismiss();
+                    Toast.makeText(Registration.this, "done", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    progressDialog.dismiss();
+                    Toast.makeText(Registration.this, "sorry", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
     }
+
+
             protected void onActivityResult(int requestCode, int resultCode, Intent data) {
                 super.onActivityResult(requestCode, resultCode, data);
                 if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData()!=null)

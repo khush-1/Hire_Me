@@ -23,6 +23,17 @@
             android:layout_weight="1"
             android:src="@drawable/clglogo"
             android:visibility="visible" />
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_background"
+            android:hint="FullName"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/regemail"
