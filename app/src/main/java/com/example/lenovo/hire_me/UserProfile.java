@@ -1,67 +1,58 @@
 package com.example.lenovo.hire_me;
 
 public class UserProfile {
-    public String username,usercontact,useremail,userdob,userbranch,userresu,usertra;
+    public String branch,dob,email,name,phone;
 
     public UserProfile()
     {
 
     }
-    public UserProfile(String username,String usercontact,String useremail,String userdob,String userbranch,String userresu,String usertra){
-        this.username = username;
-        this.useremail = useremail;
-        this.userbranch = userbranch;
-        this.userdob = userdob;
-        this.usercontact = usercontact;
-        this.userresu=userresu;
-        this.usertra=usertra;
+
+    public UserProfile(String branch, String dob, String email, String name, String phone) {
+        this.branch = branch;
+        this.dob = dob;
+        this.email = email;
+        this.name = name;
+        this.phone = phone;
     }
 
-    public String getUsername() {
-        return username;
+    public String getBranch() {
+        return branch;
     }
 
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-
-    public String getUsercontact() {
-        return usercontact;
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 
-//    public void setUsercontact(String usercontact) {
-//        this.usercontact = usercontact;
-//    }
-
-    public String getUseremail() {
-        return useremail;
+    public String getDob() {
+        return dob;
     }
 
-//    public void setUseremail(String useremail) {
-//        this.useremail = useremail;
-//    }
-
-    public String getUserdob() {
-        return userdob;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
-//    public void setUserdob(String userdob) {
-//        this.userdob = userdob;
-//    }
-
-    public String getUserbranch() {
-        return userbranch;
+    public String getEmail() {
+        return email;
     }
 
-//    public void setUserbranch(String userbranch) {
-//        this.userbranch = userbranch;
-//    }
-    public String getUserresu()
-    {
-        return userresu;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public String getUsertra()
-    {
-        return usertra;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

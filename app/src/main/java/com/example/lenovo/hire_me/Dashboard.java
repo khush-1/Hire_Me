@@ -38,20 +38,19 @@ public class Dashboard extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getCurrentUser().getUid());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                profileName.setText(userProfile.getUsername());
-                profileEmail.setText(userProfile.getUseremail());
-                profileBranch.setText(userProfile.getUserbranch());
-                profileDob.setText(userProfile.getUserdob());
-                profileContact.setText(userProfile.getUsercontact());
-                profileResume.setText(userProfile.getUserresu());
-                profileTranscript.setText(userProfile.getUsertra());
+                profileName.setText(userProfile.getName());
+                profileEmail.setText(userProfile.getEmail());
+                profileBranch.setText(userProfile.getBranch());
+                profileDob.setText(userProfile.getDob());
+                profileContact.setText(userProfile.getPhone());
+
             }
 
             @Override
