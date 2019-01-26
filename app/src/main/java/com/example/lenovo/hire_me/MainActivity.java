@@ -165,10 +165,6 @@ public class MainActivity extends AppCompatActivity
 
 
         }
-        else if(id==R.id.WISH){
-            startActivity(new Intent(MainActivity.this,Wishlist.class));
-
-        }
         else if(id == R.id.archives)
         {
             startActivity(new Intent(MainActivity.this,WebViewActivity.class));
@@ -195,7 +191,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.Ques) {
-            startActivity(new Intent(MainActivity.this,QuesAns.class));
+            startActivity(new Intent(MainActivity.this,Questions.class));
 
         }
 
