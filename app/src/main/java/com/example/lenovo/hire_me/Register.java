@@ -89,6 +89,7 @@ public class Register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 progressDialog.dismiss();
                                 if(task.isSuccessful()){
+                                    mAuth.signOut();
                                     Toast.makeText(Register.this, "verification email sent ", Toast.LENGTH_SHORT).show();
 
                                 }
