@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.apply) {
+            startActivity(new Intent(MainActivity.this,Apply.class));
 
         } else if (id == R.id.Comment) {
            sendUserToCommentActivity();
