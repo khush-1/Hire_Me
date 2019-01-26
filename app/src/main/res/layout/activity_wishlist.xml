@@ -10,14 +10,21 @@
     android:orientation="vertical"
     tools:context=".Wishlist">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share name of company of your dreams!" />
+    <EditText
+        android:id="@+id/dream"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@drawable/edittext_background"
+        android:hint="enter company name" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@+id/dream"
+        android:text="Add Company"
+        android:id="@+id/add_company"
+        android:background="@drawable/button_background"
+
+        />
+
 </RelativeLayout>
