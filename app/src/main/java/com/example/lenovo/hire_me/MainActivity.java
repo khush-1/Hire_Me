@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity
             progressDialog.show();
             mAuth.signOut();
             sendUserToLoginActivity();
-            finish();
+
 
         }
         else if (id == R.id.faq) {
@@ -186,14 +186,14 @@ public class MainActivity extends AppCompatActivity
     private void sendUserToFaqActivity() {
         Intent i=new Intent(MainActivity.this,Faq.class);
         startActivity(i);
-        finish();
+
 
     }
 
     private void sendUserToCommentActivity() {
         Intent i=new Intent(MainActivity.this,CommentSection.class);
         startActivity(i);
-        finish();
+
     }
 
 }
