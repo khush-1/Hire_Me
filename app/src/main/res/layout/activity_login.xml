@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"
         android:layout_marginBottom="191dp"
         android:text="Login" />
 
@@ -22,15 +23,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="89dp"
+        android:background="@drawable/edittext_background"
         android:text="Not Registered Yet?? Click Here" />
 
     <EditText
         android:id="@+id/regemail"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="131dp"
+        android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Enter Email..."
         android:inputType="textEmailAddress" />
@@ -38,10 +41,11 @@
     <EditText
         android:id="@+id/regpassword"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="189dp"
+        android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword" />
@@ -51,8 +55,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@drawable/textview_background"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="155dp"
         android:text="Forgot Password?" />
+
+    <TextView
+        android:id="@+id/admin_login_id"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="115dp"
+        android:background="@drawable/textview_background"
+        android:hint="Login as Admin"
+        android:text="Login as Admin" />
 
 </RelativeLayout>

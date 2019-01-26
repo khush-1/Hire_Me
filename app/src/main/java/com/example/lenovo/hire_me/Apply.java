@@ -42,21 +42,7 @@ public class Apply extends AppCompatActivity {
                 spinner.setSelection(position);
 
                 branch = parent.getItemAtPosition(position).toString();
-                databaseReference = FirebaseDatabase.getInstance().getReference("companyNames").child("branch");
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
 
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-                {
-
-                }
 
             }
 
@@ -70,7 +56,7 @@ public class Apply extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Apply.this,DetailInfo.class);
-                //intent.putExtra("positionsOfCompany",databaseReference);
+                intent.putExtra("nameOfCompany",branch);
                 startActivity(intent);
             }
         });

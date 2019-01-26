@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lenovo.hire_me.Admin.AdminLogin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -24,6 +25,7 @@ public class Login extends AppCompatActivity {
     FirebaseAuth mAuth;
     ProgressDialog progressDialog;
     TextView forgotPassword;
+    TextView admin_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class Login extends AppCompatActivity {
         password=(EditText)findViewById(R.id.regpassword);
         mAuth=FirebaseAuth.getInstance();
         forgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
+        admin_login=findViewById(R.id.admin_login_id);
 
 
 
@@ -102,6 +105,15 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
+        admin_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Login.this, AdminLogin.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
     }
 
 }
