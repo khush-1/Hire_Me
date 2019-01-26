@@ -18,6 +18,6 @@ public class WebViewActivity extends AppCompatActivity {
         webView = (WebView)findViewById(R.id.webView1);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://android-geeksforgeeks.org");
+        webView.loadUrl("http://android-coffee.com");
     }
 }
