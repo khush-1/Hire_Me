@@ -46,7 +46,7 @@ public class Registration extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     FirebaseStorage storage;
     StorageReference storageReference;
-
+    private EditText resu,tra;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +62,8 @@ public class Registration extends AppCompatActivity {
         btnchoose = (Button) findViewById(R.id.btnsel);
         btnUpload = (Button) findViewById(R.id.btnPro);
         imageview = (ImageView) findViewById(R.id.imgView);
-
+        resu=(EditText)findViewById(R.id.resume);
+        tra=(EditText)findViewById(R.id.transcript);
         btnchoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,9 +160,11 @@ public class Registration extends AppCompatActivity {
         final String email=regEmail.getText().toString().trim();
         String phone=regPhone.getText().toString().trim();
         String dob=regDob.getText().toString().trim();
+        String r=resu.getText().toString().trim();
+        String t=tra.getText().toString().trim();
 
         UserProfile user=new UserProfile(name,
-                email,branch,dob,phone);
+                email,branch,dob,phone,r,t);
         FirebaseDatabase.getInstance().getReference("Users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {

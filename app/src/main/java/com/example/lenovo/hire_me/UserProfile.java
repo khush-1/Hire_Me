@@ -1,19 +1,20 @@
 package com.example.lenovo.hire_me;
 
 public class UserProfile {
-    public String username,usercontact,useremail,userdob,userbranch;
+    public String username,usercontact,useremail,userdob,userbranch,userresu,usertra;
 
     public UserProfile()
     {
 
     }
-    public UserProfile(String username,String usercontact,String useremail,String userdob,String userbranch){
+    public UserProfile(String username,String usercontact,String useremail,String userdob,String userbranch,String userresu,String usertra){
         this.username = username;
         this.useremail = useremail;
         this.userbranch = userbranch;
         this.userdob = userdob;
         this.usercontact = usercontact;
-
+        this.userresu=userresu;
+        this.usertra=usertra;
     }
 
     public String getUsername() {
@@ -55,4 +56,12 @@ public class UserProfile {
 //    public void setUserbranch(String userbranch) {
 //        this.userbranch = userbranch;
 //    }
+    public String getUserresu()
+    {
+        return userresu;
+    }
+    public String getUsertra()
+    {
+        return usertra;
+    }
 }

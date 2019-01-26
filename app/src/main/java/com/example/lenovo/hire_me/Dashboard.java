@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 
 public class Dashboard extends AppCompatActivity {
 
-    private TextView profileName,profileEmail,profileDob,profileContact,profileBranch;
+    private TextView profileName,profileEmail,profileDob,profileContact,profileBranch,profileResume,profileTranscript;
     private Button profileUpdate;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -33,7 +33,8 @@ public class Dashboard extends AppCompatActivity {
         profileDob = (TextView)findViewById(R.id.tvDOB);
         profileContact = (TextView)findViewById(R.id.tvContact);
         profileUpdate = (Button)findViewById(R.id.btnupdate);
-
+        profileResume=(TextView)findViewById(R.id.res);
+        profileTranscript=(TextView)findViewById(R.id.trans);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -49,7 +50,8 @@ public class Dashboard extends AppCompatActivity {
                 profileBranch.setText(userProfile.getUserbranch());
                 profileDob.setText(userProfile.getUserdob());
                 profileContact.setText(userProfile.getUsercontact());
-
+                profileResume.setText(userProfile.getUserresu());
+                profileTranscript.setText(userProfile.getUsertra());
             }
 
             @Override
