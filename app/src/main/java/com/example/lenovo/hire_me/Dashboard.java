@@ -2,6 +2,7 @@ package com.example.lenovo.hire_me;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +39,7 @@ public class Dashboard extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getCurrentUser().getUid());
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child(firebaseAuth.getCurrentUser().getUid());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -53,6 +54,7 @@ public class Dashboard extends AppCompatActivity {
                 profileResume.setText(userProfile.getR());
                 profileTranscript.setText(userProfile.getT());
 
+
             }
 
             @Override
@@ -62,7 +64,17 @@ public class Dashboard extends AppCompatActivity {
 
             }
         });
+        profileUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Update();
+            }
+        });
 
 
+    }
+
+    private void Update() {
+        
     }
 }
