@@ -48,6 +48,11 @@
             android:id="@+id/stats"
             android:icon="@drawable/ic_menu_manage"
             android:title="Statistic" />
+        <item
+            android:id="@+id/chatbox"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Chat Section"
+            />
 
         <item
             android:id="@+id/logout"
