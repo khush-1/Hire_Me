@@ -18,7 +18,7 @@
             android:id="@+id/show"
             android:outlineSpotShadowColor="@color/lightgray"
             android:src="@drawable/profile"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="101dp"
             />
 
       <LinearLayout
