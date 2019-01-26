@@ -37,7 +37,7 @@ public class DetailInfo extends AppCompatActivity {
         Intent intent = getIntent();
         String companyName = intent.getStringExtra("nameOfCompany");
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("companyNames").child(companyName);
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("CompanyNames").child(companyName);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
