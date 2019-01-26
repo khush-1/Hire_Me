@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.companies) {
 
+            startActivity(new Intent(MainActivity.this,Visiting_Companies.class));
 
         } else if (id == R.id.apply) {
             startActivity(new Intent(MainActivity.this,Apply.class));
