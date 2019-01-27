@@ -17,3 +17,7 @@ company of your dreams.Statistics are represented by bargraphs and pie charts.Al
 communicate with TPR. All your as well as placement data is present on same ground which makes such "tedious" and "complex" process 
 smoother,by linking most of the placement related processes into one.
 
+
+
+With Regards
+Team Development_Freaks
