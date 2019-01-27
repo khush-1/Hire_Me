@@ -1,6 +1,8 @@
 package com.example.lenovo.hire_me;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -74,9 +76,9 @@ public class Apply extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(Apply.this,ApplyNow.class);
-//                startActivity(intent);
-                ApplyNow applyNow = new ApplyNow();
+               ApplyNow applyNow = new ApplyNow();
+               applyNow.show(getSupportFragmentManager(),"DIALOG BOX");
+
             }
         });
 
