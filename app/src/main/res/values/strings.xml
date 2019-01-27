@@ -13,6 +13,9 @@
         <item>Reliance</item>
 
     </string-array>
+    <string name="fire">UPLOAD</string>
+    <string name="cancel">CANCEL</string>
+    <string name="dialog_fire_missiles">UPDATE YOUR RESUME ON THE SUBMITTED DRIVE LINK OR CLICK ON UPLOAD</string>
     <string-array name="branch">
         <item>Select Your Branch</item>
         <item>Computer Science and Engineering</item>

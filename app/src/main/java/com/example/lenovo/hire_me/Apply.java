@@ -74,8 +74,9 @@ public class Apply extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Apply.this,ApplyNow.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Apply.this,ApplyNow.class);
+//                startActivity(intent);
+                ApplyNow applyNow = new ApplyNow();
             }
         });
 
