@@ -21,3 +21,9 @@ smoother,by linking most of the placement related processes into one.
 
 With Regards
 Team Development_Freaks
+
+CONTRIBUTERS
+1.KHUSHBOO AGARWAL
+2.SARASWATI KUMARI
+3.ANZUM BANO
+4.RASHI MAHAWAR
